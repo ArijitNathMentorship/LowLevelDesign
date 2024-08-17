@@ -1,0 +1,56 @@
+package com.mentorship.lld.parkinglot.service.parkingspot;
+
+import com.arijit.lld.parkinglot.model.VehicleType;
+import com.arijit.lld.parkinglot.service.vehicle.Vehicle;
+
+import java.util.Objects;
+
+// ParkingSpot is an abstract class
+public abstract class ParkingSpot {
+    private int id;
+    private boolean isSpotFree;
+    private Vehicle vehicle;
+    private VehicleType vehicleType;
+    protected Double parkingRate;
+
+    public ParkingSpot(VehicleType vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
+    public ParkingSpot() {
+    this.vehicleType = null;
+  }
+
+    public boolean getIsFree() {
+        return this.isSpotFree;
+    }
+
+    public boolean isReservedForHandicapped() {
+        return Objects.isNull(vehicleType);
+    }
+
+    public boolean assignVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
+        this.isSpotFree = false;
+        return true;
+    }
+    public boolean removeVehicle(){
+        this.vehicle = null;
+        this.isSpotFree = true;
+        return true;
+    }
+
+    public Double getParkingRate() {
+        return this.parkingRate;
+    }
+
+    public abstract void assignParkingRate(Double parkingRate);
+}
+
+
+
+
+
+
+
+
