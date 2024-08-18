@@ -1,6 +1,6 @@
 package com.mentorship.lld.parkinglot.service;
 
-import com.arijit.lld.parkinglot.service.parkingspot.ParkingSpot;
+import com.mentorship.lld.parkinglot.service.parkingspot.ParkingSpot;
 
 import java.util.HashMap;
 import java.util.List;

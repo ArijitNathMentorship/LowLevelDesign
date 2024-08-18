@@ -1,8 +1,8 @@
 package com.mentorship.lld.parkinglot.model;
 
-import com.arijit.lld.parkinglot.service.parkingspot.ParkingSpot;
-import com.arijit.lld.parkinglot.service.payment.Payment;
-import com.arijit.lld.parkinglot.service.vehicle.Vehicle;
+import com.mentorship.lld.parkinglot.service.parkingspot.ParkingSpot;
+import com.mentorship.lld.parkinglot.service.payment.Payment;
+import com.mentorship.lld.parkinglot.service.vehicle.Vehicle;
 
 public class ParkingTicket {
     private String ticketNo;

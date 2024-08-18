@@ -1,8 +1,13 @@
 package com.mentorship.lld.parkinglot.service.entranceexit;
 
-import com.arijit.lld.parkinglot.model.ParkingTicket;
-import com.arijit.lld.parkinglot.model.VehicleType;
-import com.arijit.lld.parkinglot.service.parkingspot.*;
+import com.mentorship.lld.parkinglot.model.ParkingTicket;
+import com.mentorship.lld.parkinglot.model.VehicleType;
+import com.mentorship.lld.parkinglot.service.parkingspot.CompactParkingSpot;
+import com.mentorship.lld.parkinglot.service.parkingspot.HandicappedParkingSpot;
+import com.mentorship.lld.parkinglot.service.parkingspot.LargeParkingSpot;
+import com.mentorship.lld.parkinglot.service.parkingspot.MotorcycleParkingSpot;
+import com.mentorship.lld.parkinglot.service.parkingspot.ParkingSpot;
+import com.mentorship.lld.parkinglot.service.parkingspot.TruckParkingSpot;
 
 import java.time.Instant;
 import java.util.HashMap;
@@ -10,7 +15,7 @@ import java.util.Map;
 import java.util.UUID;
 
 public abstract class Entrance {
-  // Data members 
+  // Data members
     private int id;
 
     public Entrance(int id) {

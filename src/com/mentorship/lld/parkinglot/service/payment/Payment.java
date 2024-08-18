@@ -1,7 +1,7 @@
 package com.mentorship.lld.parkinglot.service.payment;
 
-import com.arijit.lld.parkinglot.constants.PaymentMode;
-import com.arijit.lld.parkinglot.constants.PaymentStatus;
+import com.mentorship.lld.parkinglot.constants.PaymentMode;
+import com.mentorship.lld.parkinglot.constants.PaymentStatus;
 
 import java.util.Date;
 
