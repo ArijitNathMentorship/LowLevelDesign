@@ -1,9 +1,9 @@
 package com.mentorship.lld.parkinglot.service.entranceexit;
 
-import com.arijit.lld.parkinglot.constants.PaymentMode;
-import com.arijit.lld.parkinglot.model.ParkingTicket;
-import com.arijit.lld.parkinglot.service.parkingspot.ParkingSpot;
-import com.arijit.lld.parkinglot.service.payment.Payment;
+import com.mentorship.lld.parkinglot.constants.PaymentMode;
+import com.mentorship.lld.parkinglot.model.ParkingTicket;
+import com.mentorship.lld.parkinglot.service.parkingspot.ParkingSpot;
+import com.mentorship.lld.parkinglot.service.payment.Payment;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

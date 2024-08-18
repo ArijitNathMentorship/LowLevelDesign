@@ -1,6 +1,6 @@
 package com.mentorship.lld.parkinglot.service.parkingspot;
 
-import com.arijit.lld.parkinglot.model.VehicleType;
+import com.mentorship.lld.parkinglot.model.VehicleType;
 
 public class CompactParkingSpot extends ParkingSpot {
 

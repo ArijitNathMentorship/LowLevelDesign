@@ -1,7 +1,7 @@
 package com.mentorship.lld.parkinglot.service.parkingspot;
 
-import com.arijit.lld.parkinglot.model.VehicleType;
-import com.arijit.lld.parkinglot.service.vehicle.Vehicle;
+import com.mentorship.lld.parkinglot.model.VehicleType;
+import com.mentorship.lld.parkinglot.service.vehicle.Vehicle;
 
 import java.util.Objects;
 
@@ -45,6 +45,14 @@ public abstract class ParkingSpot {
     }
 
     public abstract void assignParkingRate(Double parkingRate);
+
+    public VehicleType getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(VehicleType vehicleType) {
+        this.vehicleType = vehicleType;
+    }
 }
 
 
