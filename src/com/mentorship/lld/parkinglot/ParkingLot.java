@@ -13,14 +13,13 @@ public class ParkingLot {
         this.floors = floors;
     }
 
-    public ParkingSpot parkVehicle(Vehicle vehicle) {
-        for (ParkingFloor floor : floors) {
-            ParkingSpot spot = floor.findAvailableSpot(vehicle.getVehicleType());
-            if (spot != null) {
-                spot.assignVehicle(vehicle);
-                return spot;
-            }
+    public ParkingSpot parkVehicle(Vehicle vehicle, int floorId) {
+        ParkingSpot spot = floors.get(floorId).findAvailableSpot(vehicle.getVehicleType());
+        if (spot != null) {
+            spot.assignVehicle(vehicle);
+            return spot;
         }
+
         return null;
     }
 

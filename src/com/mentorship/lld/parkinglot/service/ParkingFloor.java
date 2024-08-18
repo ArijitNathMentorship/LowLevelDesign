@@ -1,12 +1,7 @@
 package com.mentorship.lld.parkinglot.service;
 
 import com.mentorship.lld.parkinglot.model.VehicleType;
-import com.mentorship.lld.parkinglot.service.parkingspot.CompactParkingSpot;
-import com.mentorship.lld.parkinglot.service.parkingspot.HandicappedParkingSpot;
-import com.mentorship.lld.parkinglot.service.parkingspot.LargeParkingSpot;
-import com.mentorship.lld.parkinglot.service.parkingspot.MotorcycleParkingSpot;
 import com.mentorship.lld.parkinglot.service.parkingspot.ParkingSpot;
-import com.mentorship.lld.parkinglot.service.parkingspot.TruckParkingSpot;
 
 import java.util.HashMap;
 import java.util.List;
@@ -20,7 +15,7 @@ public class ParkingFloor {
 
     public ParkingSpot findAvailableSpot(VehicleType type) {
         for (ParkingSpot spot : spots) {
-            if (!spot.getIsFree() && spot.getVehicleType() == type) {
+            if (spot.getIsFree() && spot.getVehicleType() == type) {
                 return spot;
             }
         }

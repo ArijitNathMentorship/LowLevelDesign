@@ -7,14 +7,17 @@ import java.util.Objects;
 
 // ParkingSpot is an abstract class
 public abstract class ParkingSpot {
-    private int id;
+    private String id;
     private boolean isSpotFree;
     private Vehicle vehicle;
     private VehicleType vehicleType;
     protected Double parkingRate;
 
-    public ParkingSpot(VehicleType vehicleType) {
+    public ParkingSpot(String id, VehicleType vehicleType, double parkingRate) {
+        this.id = id;
         this.vehicleType = vehicleType;
+        this.parkingRate = parkingRate;
+        this.isSpotFree = true;
     }
 
     public ParkingSpot() {

@@ -5,8 +5,8 @@ import com.mentorship.lld.parkinglot.model.VehicleType;
 
 public class MotorcycleParkingSpot extends ParkingSpot {
 
-    public MotorcycleParkingSpot() {
-        super(VehicleType.BIKE);
+    public MotorcycleParkingSpot(String id, double parkingRate) {
+        super(id, VehicleType.BIKE, parkingRate);
     }
 
     @Override

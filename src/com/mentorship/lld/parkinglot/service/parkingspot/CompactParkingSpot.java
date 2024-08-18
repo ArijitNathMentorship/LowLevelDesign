@@ -4,8 +4,8 @@ import com.mentorship.lld.parkinglot.model.VehicleType;
 
 public class CompactParkingSpot extends ParkingSpot {
 
-    public CompactParkingSpot() {
-        super(VehicleType.COMPACT);
+    public CompactParkingSpot(String id, double parkingRate) {
+        super(id, VehicleType.COMPACT, parkingRate);
     }
 
     @Override

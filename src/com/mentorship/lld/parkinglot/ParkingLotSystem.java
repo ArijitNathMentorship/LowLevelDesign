@@ -16,11 +16,12 @@ class ParkingLotSystem {
         this.ticketSpotMap = new HashMap<>();
     }
 
-    public ParkingTicket issueTicket(Vehicle vehicle) {
-        ParkingSpot spot = parkingLot.parkVehicle(vehicle);
+    public ParkingTicket issueTicket(Vehicle vehicle, int floorId) {
+        ParkingSpot spot = parkingLot.parkVehicle(vehicle, floorId);
         if (spot != null) {
             ParkingTicket ticket = new ParkingTicket();
             ticket.setVehicle(vehicle);
+            ticket.setAssignedSpot(spot);
             ticketSpotMap.put(ticket, spot);
             return ticket;
         } else {
@@ -29,12 +30,13 @@ class ParkingLotSystem {
         }
     }
 
-    public double processPayment(ParkingTicket ticket) {
+    public double evaluateCharge(ParkingTicket ticket) {
         ParkingSpot spot = ticketSpotMap.get(ticket);
         if (spot != null) {
+            ticket.validateTicket();
             parkingLot.vacateSpot(spot);
             ticketSpotMap.remove(ticket);
-            return 10.0;
+            return ticket.evaluateAmount();
         } else {
             System.out.println("Invalid ticket.");
             return 0.0;
